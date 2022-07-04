@@ -1,8 +1,11 @@
+// import icon from mui library
 import { ChevronRight } from '@mui/icons-material'
+// import cart style from cart.scss
 import './cart.scss'
 
 const Cart = () => {
 
+    // cart data in array form
     const item = [
         {
             id: 1,
@@ -30,16 +33,25 @@ const Cart = () => {
     return (
         <div className='cart'>
             {
+
+                // fetching array data from map function
                 item.map((data) => {
                     return (
                         <div className="item" key={data.id}>
+
+                            {/* cart top container */}
                             <div className="cartTop">
-                                <span className='title' style={{color: `${data.color}`}}>{data.cartTitle}</span>
+                                {/* cart name */}
+                                <span className='title' style={{ color: `${data.color}` }}>{data.cartTitle}</span>
                                 <ChevronRight className='icon' />
                             </div>
+
+                            {/* cart bottom container */}
                             <div className="cartBottom">
+                                {/* monthly count container*/}
                                 <h1 className="counter">{data.counter}</h1>
                                 <div className="userImageContainer">
+                                    {/* user image section */}
                                     <div className="userImage">
                                         <img src={data.image} alt="" />
                                     </div>

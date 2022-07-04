@@ -2,7 +2,7 @@ import { Token } from '@mui/icons-material'
 import './rank.scss'
 
 const Rank = () => {
-
+    // rank data in arary form
     const user = [
         {
             id: 1,
@@ -33,26 +33,36 @@ const Rank = () => {
     ]
 
     return (
+        // rank container
         <div className='rank'>
+            {/* rank title */}
             <div className="rankTitle">
                 <Token className='icon' />
                 <span>Work rank</span>
             </div>
 
             {
+                // fetching data from array using map function
                 user.map((item, index) => {
                     return (
                         <>
                             <div key={index}>
+                                {/* divider */}
                                 <hr className="divider" />
+                                {/* rank user container */}
                                 <div className="userContainer">
                                     <div className="userContainerTop">
+                                        {/* rank user image */}
                                         <img src={item.userImage} alt="" />
                                         <div className="userNameAndFollowers">
+                                            {/* rank user name */}
                                             <span className="userName">{item.userName}</span>
+
+                                            {/* rank user followers */}
                                             <span className="userFollowers">{item.followers} followers</span>
                                         </div>
                                     </div>
+                                    {/* user follower increase in a month */}
                                     <span className='newFollowers' style={{ color: `${item.color}` }}>{item.newFollowers}</span>
                                 </div>
                             </div>
@@ -60,8 +70,10 @@ const Rank = () => {
                     )
                 })
             }
+            {/* divider */}
             <hr className="divider" />
             <div className="userContainer allUser">
+                {/* see all rank users */}
                 <span>To see all</span>
             </div>
         </div>
