@@ -1,0 +1,60 @@
+.discussion {
+    width: calc(100% + 20px);
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    background-color: white;
+    border-radius: 5px;
+
+    @media screen and (max-width: 600px){
+        width: 100%;
+    }
+
+    .discussionTitle {
+        padding: 15px;
+        display: flex;
+        align-items: center;
+        font-size: 15px;
+        color: blue;
+
+        .icon {
+            margin-right: 10px;
+        }
+    }
+
+    .divider {
+        margin-bottom: 10px;
+        background-color: rgb(220, 220, 220);
+        border: .5px solid rgb(224, 224, 224);
+    }
+
+    .groupContainer {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+
+        .groupContainerHeading {
+            display: flex;
+            justify-content: space-between;
+            line-height: 1.3;
+            width: 100%;
+
+            .groupName {
+                font-size: 18px;
+                font-weight: 600;
+                color: rgb(59, 59, 59);
+            }
+
+            .date {
+                align-self: center;
+                font-size: 14px;
+                color: rgb(175, 175, 175);
+            }
+        }
+
+    }
+
+    .groupDesc {
+        color: rgb(175, 175, 175);
+        font-size: 12px;
+    }
+
+}

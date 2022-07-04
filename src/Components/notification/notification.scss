@@ -1,0 +1,71 @@
+.notification {
+    overflow: auto;
+    height: 580px;
+    width: calc(100%);
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    background-color: white;
+    border-radius: 5px;
+    padding: 5px;
+
+    &::-webkit-scrollbar{
+        width: 0px;
+    }
+
+    .notificationTitle {
+        position: sticky;
+        background-color: inherit;
+        top: 0;
+        padding: 15px;
+        display: flex;
+        align-items: center;
+        font-size: 13px;
+        color: blue;
+
+        .icon {
+            margin-right: 10px;
+        }
+    }
+
+    .notificationItems {
+        border-bottom: 1px solid rgb(220, 220, 220);
+        padding: 5px 10px;
+
+
+        .notificationItem {
+            display: flex;
+            align-items: center;
+
+            div {
+                display: flex;
+            }
+
+            .icon {
+                color: rgb(172, 172, 172);
+                margin-right: 5px;
+                font-size: 16px;
+            }
+
+            .userName {
+                font-size: 16px;
+                font-weight: 600;
+                margin-right: 8px;
+            }
+
+            .workStatus{
+                color: rgb(172, 172, 172);
+                font-size: 12px;
+            }
+        }
+
+        .projectName{
+            font-size: 15px;
+            font-weight: 600;
+            color: rgb(92, 92, 92);
+        }
+
+        .time{
+            color: rgb(172, 172, 172);
+            font-size: 12px;
+        }
+    }
+}
